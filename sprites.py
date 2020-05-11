@@ -80,3 +80,5 @@ class Healthbar(Sprite):
         self.rect.y = y
     def update(self):
         self.rect.width = self.game.player.hitpoints
+
+# heyooooo
