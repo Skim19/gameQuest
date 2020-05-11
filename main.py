@@ -17,6 +17,8 @@ from sprites import *
 
 
 # Fancy HUD functions
+# tried to change health bar to not go into negative numbers and stop if from overflowing
+# code is definitely broken 
 def draw_player_health(surf, x, y, pct):
     if pct < 0:
         pct = 0
@@ -29,10 +31,17 @@ def draw_player_health(surf, x, y, pct):
         col = GREEN
     elif pct > 0.3:
         col = YELLOW
-    else:
+    elif pct > 0:
         col = RED
+    else:
+        col = BLACK 
+        fill = 0 
+    
+ 
     pg.draw.rect(surf, col, fill_rect)
     pg.draw.rect(surf, WHITE, outline_rect, 2)
+ 
+        
 # basic health bar
 
 # basic HUD functions
