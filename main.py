@@ -17,7 +17,7 @@ from sprites import *
 
 
 # Fancy HUD functions
-# tried to change health bar to not go into negative numbers and stop if from overflowing
+# tried to change health bar to not go into negative numbers and stop it from overflowing
 # code is definitely broken 
 def draw_player_health(surf, x, y, pct):
     if pct < 0:
